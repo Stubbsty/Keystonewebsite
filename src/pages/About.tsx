@@ -36,6 +36,7 @@ const credentials = [
 ]
 
 export default function About() {
+ return (
   <div className="pt-20">
       {/* Page header */}
       <section className="bg-[#0a2744] text-white relative overflow-hidden">
