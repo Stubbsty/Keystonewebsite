@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Services overview */}
-      <section className="py-12 bg-white">
+      <section className="pt-4 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <span className="gold-line mb-4" />
@@ -159,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* Why Keystone */}
-      <section className="py-12 bg-[#0a2744] text-white">
+      <section className="pt-4 pb-10 bg-[#0a2744] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <span className="gold-line mb-4" />
@@ -186,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* About snippet */}
-      <section className="py-12 bg-white">
+      <section className="pt-4 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -231,7 +231,7 @@ export default function Home() {
 
       {/* CTA Banner */}
       <section className="bg-[#0a2744] border-t-4 border-[#C9A84C]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="font-heading font-semibold text-2xl text-white mb-2">
