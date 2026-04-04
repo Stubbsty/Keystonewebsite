@@ -6,14 +6,14 @@ export default function Footer() {
     <footer className="bg-[#0a2744] text-white">
       <div className="h-1 bg-[#C9A84C]" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="mb-6">
-              <p className="font-heading font-bold text-xl text-white tracking-wide">KEYSTONE</p>
-              <p className="font-heading text-xs text-[#C9A84C] tracking-widest uppercase">Facility Services</p>
+            <p className="font-heading font-semibold text-base text-white tracking-wide">KEYSTONE</p>
+            <p className="font-heading text-xs text-[#C9A84C] tracking-widest uppercase">Facility Services</p>
             </div>
             <p className="text-white/60 text-sm leading-relaxed">
               A managed commercial cleaning system — not just a cleaning service. Every job tracked, verified, and fully accountable.
@@ -99,7 +99,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-8 pt-6 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-white/40 text-xs">
             © {new Date().getFullYear()} Keystone Facility Services (Stubbs Capital Pty Ltd). All rights reserved.
           </p>
