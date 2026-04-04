@@ -92,23 +92,30 @@ export default function Services() {
   return (
     <div className="pt-20">
       {/* Header */}
-      <section className="bg-[#0a2744] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-[#0a2744] text-white relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-5"
+          style={{
+            backgroundImage: 'repeating-linear-gradient(45deg, #C9A84C 0, #C9A84C 1px, transparent 0, transparent 50%)',
+            backgroundSize: '20px 20px',
+          }}
+        />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
           <div className="flex items-center gap-3 mb-6">
-            <span className="h-px w-12 bg-[#C9A84C]" />
-            <span className="font-heading text-[#C9A84C] text-sm font-medium tracking-widest uppercase">
+            <span className="h-px w-10 bg-[#C9A84C]" />
+            <span className="font-heading text-[#C9A84C] text-xs font-medium tracking-widest uppercase">
               Services
             </span>
           </div>
-          <h1 className="font-heading font-bold text-5xl lg:text-6xl max-w-3xl leading-tight">
+          <h1 className="font-heading font-semibold text-4xl lg:text-5xl max-w-3xl leading-tight mb-6">
             Purpose-built for your<br />
             <span className="text-[#C9A84C]">environment.</span>
           </h1>
-          <p className="text-white/70 text-xl mt-8 max-w-2xl leading-relaxed">
+          <p className="text-white/70 text-base leading-relaxed max-w-xl">
             Every environment is different. Every Keystone program is built around the specific requirements of your site — not a one-size-fits-all template.
           </p>
         </div>
-        <div className="h-1 bg-[#C9A84C] mt-20" />
+        <div className="h-1 bg-[#C9A84C]" />
       </section>
 
       {/* Services list */}
