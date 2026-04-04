@@ -33,7 +33,6 @@ export default function Contact() {
   const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
 
-    // Basic validation
     if (!form.firstName || !form.lastName || !form.email || !form.message) {
       setErrorMsg('Please fill in all required fields.')
       setState('error')
@@ -87,7 +86,7 @@ export default function Contact() {
                   <div style="background: #f5f5f5; padding: 16px; font-size: 14px; line-height: 1.7; color: #333; white-space: pre-wrap;">${form.message}</div>
                 </div>
                 <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #eee;">
-                  <p style="font-size: 12px; color: #aaa;">This enquiry was submitted via keystonefacilityservices.com.au. Reply directly to this email to respond to ${form.firstName}.</p>
+                  <p style="font-size: 12px; color: #aaa;">Submitted via keystonefacilityservices.com.au. Reply directly to this email to respond to ${form.firstName}.</p>
                 </div>
               </div>
             </div>
@@ -104,7 +103,7 @@ export default function Contact() {
       setForm(initialForm)
     } catch (err) {
       console.error(err)
-      setErrorMsg('Something went wrong. Please try again or call us directly on 0430 789 756.')
+      setErrorMsg('Something went wrong. Please try again or call us on 0430 789 756.')
       setState('error')
     }
   }
@@ -114,6 +113,7 @@ export default function Contact() {
 
   return (
     <div className="pt-20">
+
       {/* Header */}
       <section className="bg-[#0a2744] text-white relative overflow-hidden">
         <div
@@ -135,55 +135,55 @@ export default function Contact() {
             <span className="text-[#C9A84C]">your facility.</span>
           </h1>
           <p className="text-white/70 text-base leading-relaxed max-w-xl">
-            Book a free site visit, request a quote, or ask a question. We respond within one business day.
+            Book a free site visit, request a quote, or ask a question. We respond within one business day — usually faster.
           </p>
         </div>
         <div className="h-1 bg-[#C9A84C]" />
       </section>
 
       {/* Contact section */}
-      <section className="py-24 bg-white">
+      <section className="pt-6 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
 
             {/* Contact info */}
             <div className="lg:col-span-1">
-              <span className="gold-line mb-6" />
-              <h2 className="font-heading font-bold text-2xl text-[#0a2744] mb-8">
+              <span className="gold-line mb-4" />
+              <h2 className="font-heading font-semibold text-xl text-[#0a2744] mb-6">
                 Get in touch
               </h2>
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#f5f5f5] flex items-center justify-center shrink-0">
-                    <Phone size={18} className="text-[#C9A84C]" />
+              <div className="space-y-6">
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 bg-[#f5f5f5] flex items-center justify-center shrink-0">
+                    <Phone size={15} className="text-[#C9A84C]" />
                   </div>
                   <div>
-                    <p className="font-heading font-semibold text-sm text-[#0a2744] mb-1">Phone</p>
+                    <p className="font-heading font-semibold text-xs text-[#0a2744] uppercase tracking-wide mb-1">Phone</p>
                     <a href="tel:0430789756" className="text-[#555555] text-sm hover:text-[#C9A84C] transition-colors">
                       0430 789 756
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#f5f5f5] flex items-center justify-center shrink-0">
-                    <Mail size={18} className="text-[#C9A84C]" />
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 bg-[#f5f5f5] flex items-center justify-center shrink-0">
+                    <Mail size={15} className="text-[#C9A84C]" />
                   </div>
                   <div>
-                    <p className="font-heading font-semibold text-sm text-[#0a2744] mb-1">Email</p>
+                    <p className="font-heading font-semibold text-xs text-[#0a2744] uppercase tracking-wide mb-1">Email</p>
                     <a
                       href="mailto:tyler.stubbs@keystonefacilityservices.com.au"
-                      className="text-[#555555] text-sm hover:text-[#C9A84C] transition-colors break-all"
+                      className="text-[#555555] text-sm hover:text-[#C9A84C] transition-colors"
                     >
                       tyler.stubbs@keystonefacilityservices.com.au
                     </a>
                   </div>
                 </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-[#f5f5f5] flex items-center justify-center shrink-0">
-                    <MapPin size={18} className="text-[#C9A84C]" />
+                <div className="flex items-start gap-3">
+                  <div className="w-9 h-9 bg-[#f5f5f5] flex items-center justify-center shrink-0">
+                    <MapPin size={15} className="text-[#C9A84C]" />
                   </div>
                   <div>
-                    <p className="font-heading font-semibold text-sm text-[#0a2744] mb-1">Location</p>
+                    <p className="font-heading font-semibold text-xs text-[#0a2744] uppercase tracking-wide mb-1">Location</p>
                     <p className="text-[#555555] text-sm leading-relaxed">
                       Brisbane, QLD<br />
                       Servicing Far North QLD to Brisbane
@@ -192,13 +192,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Response promise */}
-              <div className="mt-12 bg-[#f5f5f5] p-6 border-l-4 border-[#C9A84C]">
-                <p className="font-heading font-semibold text-sm text-[#0a2744] mb-2">
-                  Our response commitment
+              <div className="mt-8 bg-[#f5f5f5] p-5 border-l-4 border-[#C9A84C]">
+                <p className="font-heading font-semibold text-xs text-[#0a2744] mb-2">
+                  What happens next
                 </p>
-                <p className="text-[#555555] text-sm leading-relaxed">
-                  All enquiries are responded to within one business day. Site visit proposals are delivered within 48 hours of the visit.
+                <p className="text-[#555555] text-xs leading-relaxed">
+                  We respond within one business day. If you're after a quote, we'll book a free site visit and have a proposal back to you within 48 hours.
                 </p>
               </div>
             </div>
@@ -206,21 +205,21 @@ export default function Contact() {
             {/* Form */}
             <div className="lg:col-span-2">
               {state === 'success' ? (
-                <div className="flex flex-col items-center justify-center py-20 text-center">
-                  <CheckCircle size={56} className="text-[#C9A84C] mb-6" />
-                  <h3 className="font-heading font-bold text-2xl text-[#0a2744] mb-4">
+                <div className="flex flex-col items-center justify-center py-16 text-center">
+                  <CheckCircle size={48} className="text-[#C9A84C] mb-5" />
+                  <h3 className="font-heading font-semibold text-xl text-[#0a2744] mb-3">
                     Message received.
                   </h3>
-                  <p className="text-[#555555] text-base max-w-md leading-relaxed">
-                    Thank you for getting in touch. We'll respond within one business day. If your matter is urgent, call us directly on{' '}
+                  <p className="text-[#555555] text-sm max-w-md leading-relaxed">
+                    We'll be in touch within one business day. If it's urgent, call us directly on{' '}
                     <a href="tel:0430789756" className="text-[#C9A84C] font-medium">
                       0430 789 756
                     </a>.
                   </p>
                 </div>
               ) : (
-                <div className="space-y-5">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div className="space-y-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block font-heading text-xs font-semibold text-[#0a2744] tracking-widest uppercase mb-2">
                         First Name <span className="text-[#C9A84C]">*</span>
@@ -261,7 +260,7 @@ export default function Contact() {
                       placeholder="Smith & Associates Pty Ltd"
                     />
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                       <label className="block font-heading text-xs font-semibold text-[#0a2744] tracking-widest uppercase mb-2">
                         Phone
@@ -297,15 +296,15 @@ export default function Contact() {
                       name="message"
                       value={form.message}
                       onChange={handleChange}
-                      rows={6}
+                      rows={5}
                       className={inputClass}
-                      placeholder="Tell us about your facility — site type, approximate size, frequency required, and anything else relevant."
+                      placeholder="Tell us about your facility — site type, size, frequency needed, and anything else relevant."
                     />
                   </div>
 
                   {state === 'error' && errorMsg && (
                     <div className="flex items-start gap-3 bg-red-50 border border-red-200 p-4">
-                      <AlertCircle size={18} className="text-red-500 mt-0.5 shrink-0" />
+                      <AlertCircle size={16} className="text-red-500 mt-0.5 shrink-0" />
                       <p className="text-red-700 text-sm">{errorMsg}</p>
                     </div>
                   )}
@@ -313,12 +312,12 @@ export default function Contact() {
                   <button
                     onClick={handleSubmit}
                     disabled={state === 'submitting'}
-                    className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#a8873a] disabled:opacity-60 text-[#0a2744] font-heading font-semibold px-10 py-4 text-base transition-colors duration-200"
+                    className="w-full sm:w-auto bg-[#C9A84C] hover:bg-[#a8873a] disabled:opacity-60 text-[#0a2744] font-heading font-semibold px-8 py-3 text-sm transition-colors duration-200"
                   >
                     {state === 'submitting' ? 'Sending...' : 'Send Message'}
                   </button>
                   <p className="text-[#aaaaaa] text-xs">
-                    Fields marked with <span className="text-[#C9A84C]">*</span> are required.
+                    Fields marked <span className="text-[#C9A84C]">*</span> are required.
                     Your information is handled in accordance with our{' '}
                     <a href="/privacy-policy" className="underline hover:text-[#555555] transition-colors">
                       Privacy Policy
@@ -330,6 +329,7 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
     </div>
   )
 }
