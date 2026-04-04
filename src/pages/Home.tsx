@@ -62,13 +62,7 @@ export default function Home() {
           style={{ backgroundImage: 'url(/hero-office.png)' }}
         />
         <div className="absolute inset-0 bg-[#0a2744]/45" />
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, #C9A84C 0, #C9A84C 1px, transparent 0, transparent 50%)',
-            backgroundSize: '20px 20px',
-          }}
-        />
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
