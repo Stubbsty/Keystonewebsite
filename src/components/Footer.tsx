@@ -1,123 +1,110 @@
-import { Link } from 'react-router-dom'
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
 
 const LOGO_URL = 'https://static.wixstatic.com/media/e9e3b0_1c4d7dfec370438c8590d8fcdbd34287~mv2.png'
 
-export default function Footer() {
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Services', href: '/services' },
+  { label: 'Industries', href: '/industries' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Contact', href: '/contact' },
+]
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+  const location = useLocation()
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 20)
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  useEffect(() => {
+    setOpen(false)
+  }, [location])
+
   return (
-    <footer className="bg-[#0a2744] text-white">
-      {/* Gold top bar */}
-      <div className="h-1 bg-[#C9A84C]" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-
-          {/* Brand */}
-          <div className="lg:col-span-1">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled ? 'bg-[#0a2744] shadow-lg' : 'bg-[#0a2744]'
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          {/* Logo */}
+          <Link to="/" className="flex items-center">
             <img
               src={LOGO_URL}
               alt="Keystone Facility Services"
-              className="h-16 w-auto mb-6"
-              style={{ filter: 'brightness(0) invert(1)' }}
+              className="h-14 w-auto"
             />
-            <p className="text-white/60 text-sm leading-relaxed">
-              A managed commercial cleaning system — not just a cleaning service. Every job tracked, verified, and fully accountable.
-            </p>
-            <div className="mt-6">
-              <p className="text-white/40 text-xs">ABN 60 640 710 845</p>
-            </div>
-          </div>
+          </Link>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-heading font-semibold text-sm tracking-widest uppercase text-[#C9A84C] mb-6">Company</h4>
-            <ul className="space-y-3">
-              {[
-                { label: 'Home', href: '/' },
-                { label: 'About', href: '/about' },
-                { label: 'Services', href: '/services' },
-                { label: 'Industries', href: '/industries' },
-                { label: 'Capability Statement', href: '/capability-statement' },
-                { label: 'FAQ', href: '/faq' },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    to={link.href}
-                    className="text-white/60 hover:text-[#C9A84C] text-sm transition-colors duration-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h4 className="font-heading font-semibold text-sm tracking-widest uppercase text-[#C9A84C] mb-6">Services</h4>
-            <ul className="space-y-3">
-              {[
-                'Commercial Offices',
-                'Medical & Healthcare',
-                'Strata & Body Corporate',
-                'Gyms & Fitness',
-                'Retail & Hospitality',
-                'Industrial & Warehousing',
-              ].map((s) => (
-                <li key={s}>
-                  <Link
-                    to="/services"
-                    className="text-white/60 hover:text-[#C9A84C] text-sm transition-colors duration-200"
-                  >
-                    {s}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-heading font-semibold text-sm tracking-widest uppercase text-[#C9A84C] mb-6">Contact</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <Phone size={16} className="text-[#C9A84C] mt-0.5 shrink-0" />
-                <a href="tel:0430789756" className="text-white/60 hover:text-white text-sm transition-colors">
-                  0430 789 756
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <Mail size={16} className="text-[#C9A84C] mt-0.5 shrink-0" />
-                <a href="mailto:tyler.stubbs@keystonefacilityservices.com.au" className="text-white/60 hover:text-white text-sm transition-colors break-all">
-                  tyler.stubbs@keystonefacilityservices.com.au
-                </a>
-              </li>
-              <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-[#C9A84C] mt-0.5 shrink-0" />
-                <span className="text-white/60 text-sm">
-                  Brisbane, QLD<br />
-                  Servicing Far North QLD to Brisbane
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom bar */}
-        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-white/40 text-xs">
-            © {new Date().getFullYear()} Keystone Facility Services (Stubbs Capital Pty Ltd). All rights reserved.
-          </p>
-          <div className="flex gap-6">
-            <Link to="/privacy-policy" className="text-white/40 hover:text-white/70 text-xs transition-colors">
-              Privacy Policy
+          {/* Desktop nav */}
+          <nav className="hidden lg:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`font-heading text-sm font-medium tracking-wide transition-colors duration-200 ${
+                  location.pathname === link.href
+                    ? 'text-[#C9A84C]'
+                    : 'text-white hover:text-[#C9A84C]'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              to="/contact"
+              className="ml-2 bg-[#C9A84C] hover:bg-[#a8873a] text-[#0a2744] font-heading font-semibold text-sm px-5 py-2.5 transition-colors duration-200"
+            >
+              Request a Quote
             </Link>
-            <Link to="/terms-of-service" className="text-white/40 hover:text-white/70 text-xs transition-colors">
-              Terms of Service
-            </Link>
-          </div>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden text-white p-2"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
       </div>
-    </footer>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="lg:hidden bg-[#0a2744] border-t border-white/10">
+          <div className="px-4 py-4 flex flex-col gap-4">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                to={link.href}
+                className={`font-heading text-sm font-medium tracking-wide py-2 border-b border-white/10 ${
+                  location.pathname === link.href
+                    ? 'text-[#C9A84C]'
+                    : 'text-white'
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+            <Link
+              to="/contact"
+              className="mt-2 bg-[#C9A84C] text-[#0a2744] font-heading font-semibold text-sm px-5 py-3 text-center"
+            >
+              Request a Quote
+            </Link>
+          </div>
+        </div>
+      )}
+    </header>
   )
 }
