@@ -3,51 +3,51 @@ import { ArrowRight, Shield, ClipboardCheck, Users, Clock, ChevronRight } from '
 
 const services = [
   {
-    title: 'Commercial Offices',
-    description: 'Structured cleaning programs that maintain productive, professional environments with consistent results and minimal disruption.',
-  },
-  {
     title: 'Medical & Healthcare',
-    description: 'TGA-listed disinfectants, infection control protocols, and accreditation-ready documentation for the highest-compliance environments.',
+    description: 'Infection control protocols, TGA-listed disinfectants, and documented procedures built for accreditation-ready environments.',
   },
   {
-    title: 'Strata & Body Corporate',
-    description: 'One relationship, multiple sites. Coordinated cleaning across common areas, lifts, and shared facilities under a single accountable contract.',
+    title: 'Commercial Offices',
+    description: 'Consistent teams, signed completion logs, and QA reporting — so your workplace is ready before your staff arrive.',
   },
   {
     title: 'Gyms & Fitness',
-    description: 'High-frequency hygiene programs built for high-touch surfaces, change rooms, and the demanding standards of health-focused environments.',
+    description: 'High-frequency hygiene programs targeting equipment, change rooms, and high-touch surfaces — because your members notice.',
+  },
+  {
+    title: 'Strata & Body Corporate',
+    description: 'One relationship, multiple sites. Coordinated programs across common areas under a single accountable contract.',
   },
   {
     title: 'Retail & Hospitality',
-    description: 'Customer-facing spaces maintained to a standard that reflects your brand. Daily or overnight programs tailored to trading hours.',
+    description: 'Customer-facing spaces maintained to a standard that reflects your brand — scheduled around your trading hours.',
   },
   {
     title: 'Industrial & Warehousing',
-    description: 'Heavy-duty, safety-focused cleaning programs for large-format facilities. WHS-compliant processes and documented audit trails.',
+    description: 'WHS-compliant programs with pre-shift hazard assessments and full documentation for safety audits.',
   },
 ]
 
 const differentiators = [
   {
     icon: ClipboardCheck,
-    title: 'QA Inspections Every Visit',
-    description: 'Formal quality assessments with documented reporting after every clean. Not just a checklist — a verified record.',
+    title: 'Everything is documented',
+    description: 'Signed completion logs and formal QA inspection reports after every visit. If something was missed, you\'ll know — and so will we.',
   },
   {
     icon: Users,
-    title: 'Dedicated Account Manager',
-    description: 'One point of contact, always. No call centres, no rotating staff. You know who to call and they know your site.',
+    title: 'One person to call',
+    description: 'A dedicated account manager who knows your site. Not a call centre. Not a rotating roster of strangers. One contact, always.',
   },
   {
     icon: Shield,
-    title: '$20M Public Liability',
-    description: 'Fully insured with police-checked staff. Tender-ready compliance documentation available on request.',
+    title: 'Compliance built in',
+    description: '$20M public liability, police-checked staff, WHS management system, and tender-ready documentation — all standard.',
   },
   {
     icon: Clock,
-    title: '24-Hour Response Time',
-    description: 'Issues raised are addressed within 24 hours. Re-cleans arranged at no charge where standards are not met.',
+    title: 'We respond',
+    description: 'Issues raised are addressed within 24 hours. Re-cleans arranged at no charge where standards aren\'t met. No argument, no delay.',
   },
 ]
 
@@ -77,7 +77,7 @@ export default function Home() {
               <span className="text-[#C9A84C]">Our Responsibility.</span>
             </h1>
             <p className="text-white/70 text-base leading-relaxed mb-8 max-w-xl">
-              Keystone is a managed cleaning system — not just a cleaning service. Every job is tracked, verified, and fully accountable. Servicing Far North QLD to Brisbane.
+              Most cleaning contracts are set and forgotten. No documentation. No accountability. No one to call when something goes wrong. Keystone was built as the alternative — a managed cleaning system where every visit is tracked, verified, and backed by someone who picks up the phone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -120,15 +120,15 @@ export default function Home() {
       </section>
 
       {/* Services overview */}
-      <section className="pt-7 pb-8 bg-white">
+      <section className="pt-4 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
+          <div className="mb-6">
             <span className="gold-line mb-4" />
             <h2 className="font-heading font-semibold text-2xl lg:text-3xl text-[#0a2744] mb-3">
-              What We Clean
+              Who we work with
             </h2>
             <p className="text-[#555555] text-sm max-w-xl">
-              Purpose-built cleaning programs for environments where reliability and compliance are non-negotiable.
+              We work with businesses where the standard of their facility matters — to their clients, their staff, and their reputation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -159,15 +159,15 @@ export default function Home() {
       </section>
 
       {/* Why Keystone */}
-      <section className="pt-7 pb-8 bg-[#0a2744] text-white">
+      <section className="pt-4 pb-10 bg-[#0a2744] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-8">
+          <div className="mb-6">
             <span className="gold-line mb-4" />
             <h2 className="font-heading font-semibold text-2xl lg:text-3xl mb-3">
-              Why Keystone?
+              What makes Keystone different
             </h2>
             <p className="text-white/70 text-sm max-w-xl">
-              We built the systems that other cleaning companies don't have. That's the difference between a cleaner showing up and a managed facility service.
+              Anyone can say they're reliable. We built the systems to prove it.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -186,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* About snippet */}
-      <section className="pt-7 pb-8 bg-white">
+      <section className="pt-4 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -195,10 +195,10 @@ export default function Home() {
                 Built for businesses that can't afford to get it wrong.
               </h2>
               <p className="text-[#555555] text-sm leading-relaxed mb-4">
-                Keystone was built from the ground up with one goal: give Queensland businesses a cleaning partner that operates with the discipline and documentation of a large facility services company, without losing the direct accountability of an owner-operated business.
+                Medical practices. Professional offices. Gyms. These are environments where a cleaning failure isn't just an inconvenience — it's a compliance risk, a client experience problem, or a health issue.
               </p>
               <p className="text-[#555555] text-sm leading-relaxed mb-6">
-                Our clients are medical practices, professional offices, strata managers, and multi-site businesses. They value reliability and compliance over price alone — and they stay because we deliver.
+                Keystone was built with one goal: operate with the systems and documentation of a large facility services company, without losing the direct accountability of an owner-operated business. You get both — and you get someone who answers when you call.
               </p>
               <Link
                 to="/about"
@@ -235,10 +235,10 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="font-heading font-semibold text-2xl text-white mb-2">
-                Ready for a cleaning service you can actually rely on?
+                Tired of chasing your cleaner?
               </h2>
               <p className="text-white/70 text-sm">
-                Book a free site visit. No obligation. We'll walk your site and provide a tailored proposal within 48 hours.
+                Book a free site visit. We'll walk your facility, assess what's needed, and have a proposal back to you within 48 hours.
               </p>
             </div>
             <Link
