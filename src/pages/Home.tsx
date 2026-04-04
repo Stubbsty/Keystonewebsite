@@ -77,7 +77,7 @@ export default function Home() {
               <span className="text-[#C9A84C]">Our Responsibility.</span>
             </h1>
             <p className="text-white/70 text-base leading-relaxed mb-8 max-w-xl">
-              Most cleaning contracts are set and forgotten. No documentation. No accountability. No one to call when something goes wrong. Keystone was built as the alternative — a managed cleaning system where every visit is tracked, verified, and backed by someone who picks up the phone.
+              Keystone is a managed cleaning system built around one principle — every visit tracked, verified, and backed by someone who picks up the phone. Structure and accountability, built in from the start.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -235,7 +235,7 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="font-heading font-semibold text-2xl text-white mb-2">
-                Tired of chasing your cleaner?
+                Ready for a cleaning service that runs itself?
               </h2>
               <p className="text-white/70 text-sm">
                 Book a free site visit. We'll walk your facility, assess what's needed, and have a proposal back to you within 48 hours.
