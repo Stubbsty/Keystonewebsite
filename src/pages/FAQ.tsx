@@ -6,57 +6,57 @@ const faqs = [
   {
     question: 'What areas do you service?',
     answer:
-      'Keystone services commercial sites across Queensland, from Far North Queensland through to Brisbane. If you are unsure whether your site falls within our service area, contact us and we will confirm.',
+      'Keystone services commercial sites across Queensland — from Far North Queensland through to Brisbane. If you\'re unsure whether your site falls within our area, contact us and we\'ll confirm.',
   },
   {
     question: 'Are you insured?',
     answer:
-      'Yes. Keystone holds $20,000,000 in public liability insurance through QBE, plus workers\' compensation cover that is QLD compliant. A Certificate of Currency is available on request — simply contact us and we will provide it.',
+      'Yes. Keystone holds $20,000,000 in public liability insurance through QBE, plus QLD-compliant workers\' compensation cover. A Certificate of Currency is available on request — just ask.',
   },
   {
     question: 'Are your staff police-checked?',
     answer:
-      'All Keystone staff and subcontractors operating on client sites are police-checked. This is a non-negotiable requirement for all personnel, regardless of site type.',
+      'All Keystone staff and subcontractors operating on client sites are police-checked. This applies to everyone — no exceptions, regardless of site type.',
   },
   {
     question: 'What is the minimum contract term?',
     answer:
-      'Our standard service agreements are 12 months. This allows us to assign a consistent team to your site, build familiarity with your requirements, and deliver the structured, accountable service Keystone is built on. We do not offer week-to-week arrangements — our model is built on relationships, not transactions.',
+      'Our standard service agreements are 12 months. This allows us to assign a consistent team to your site, build familiarity with your requirements, and deliver structured, accountable service. We don\'t offer week-to-week arrangements — our model is built on relationships, not transactions.',
   },
   {
     question: 'How does pricing work?',
     answer:
-      'Every quote is tailored to your specific site — there is no standard rate card. Pricing is based on site size, service frequency, scope of works, and any specialist requirements. We conduct a free site visit before quoting so that the proposal is accurate, not an estimate with hidden adjustments later.',
+      'Every quote is tailored to your site. There\'s no rate card because no two sites are the same. Pricing is based on site size, service frequency, scope of works, and any specialist requirements. We visit your site before quoting so the proposal reflects what\'s actually needed — not an estimate padded for safety.',
   },
   {
-    question: 'What happens if I am not happy with a clean?',
+    question: 'What happens if I\'m not happy with a clean?',
     answer:
-      'Contact us within 48 hours of the service. We will investigate, and where the concern is valid, we will arrange a re-clean at no charge. Our QA inspection reports provide documented evidence of what was completed on each visit, which means any issue can be assessed and addressed quickly.',
+      'Contact us within 48 hours. We\'ll investigate, and where the concern is valid, we arrange a re-clean at no charge. Our QA reports document what was completed on each visit, so any issue can be assessed quickly and resolved without argument.',
   },
   {
-    question: 'What is a QA inspection and how often does it happen?',
+    question: 'What is a QA inspection?',
     answer:
-      'A QA (quality assurance) inspection is a formal review of the cleaning standard at your site. It is conducted by a supervisor — not the cleaning technician — and the results are documented in a written report. The frequency varies by contract, but regular QA inspections are included in all Keystone service agreements. You receive a copy of every report.',
+      'A QA inspection is a formal review of the cleaning standard at your site. It\'s conducted by a supervisor — not the cleaning technician — and the results are documented in a written report. You receive a copy. It\'s not a checkbox — it\'s a documented record that the standard was met.',
   },
   {
-    question: 'Can I get cleaning outside of business hours?',
+    question: 'Can you clean outside of business hours?',
     answer:
-      'Yes. The majority of our commercial clients prefer after-hours or early-morning cleaning so that the service does not disrupt their operations. Scheduling is confirmed during the site assessment and built into your service agreement.',
+      'Yes — most of our clients prefer it. After-hours or early-morning cleaning means no disruption to your operations. Scheduling is confirmed during the site assessment and locked into your service agreement.',
   },
   {
     question: 'Do you use subcontractors?',
     answer:
-      'Keystone may engage vetted subcontractors to deliver services, particularly across regional or multi-site portfolios. All subcontractors are required to meet Keystone\'s standards for insurance, conduct, and service quality. We remain fully accountable to you regardless of who delivers the service on the ground.',
+      'Keystone may engage vetted subcontractors, particularly for regional or multi-site work. All subcontractors are required to meet Keystone\'s standards for insurance, conduct, and service quality. We remain fully accountable to you regardless of who\'s on the ground.',
   },
   {
     question: 'What is the cancellation policy?',
     answer:
-      'Cancellations made more than 48 hours before a scheduled service attract no charge. Cancellations between 24 and 48 hours attract 50% of the scheduled visit value. Cancellations under 24 hours, or where access is not provided at the agreed time, attract 100% of the visit value. These fees reflect the labour costs already committed by Keystone in preparing for the service.',
+      'Cancellations more than 48 hours out — no charge. Between 24 and 48 hours — 50% of the scheduled visit value. Under 24 hours, or where access isn\'t provided — 100% of the visit value. These fees reflect the labour we\'ve already committed to your job.',
   },
   {
-    question: 'How do I request a quote?',
+    question: 'How do I get a quote?',
     answer:
-      'The simplest way is to book a free site visit using our contact form. We will visit your site, assess the scope of works, and provide a tailored proposal within 48 hours. There is no obligation.',
+      'Book a free site visit using our contact form. We\'ll visit your facility, assess what\'s needed, and have a proposal back to you within 48 hours. No obligation.',
   },
 ]
 
@@ -65,19 +65,19 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
   return (
     <div className="border-b border-[#dddddd]">
       <button
-        className="w-full flex items-center justify-between gap-4 py-6 text-left"
+        className="w-full flex items-center justify-between gap-4 py-5 text-left"
         onClick={() => setOpen(!open)}
       >
-        <span className="font-heading font-semibold text-[#0a2744] text-base pr-4">
+        <span className="font-heading font-semibold text-[#0a2744] text-sm pr-4">
           {question}
         </span>
         <ChevronDown
-          size={20}
+          size={18}
           className={`text-[#C9A84C] shrink-0 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
         />
       </button>
       {open && (
-        <div className="pb-6 pr-8">
+        <div className="pb-5 pr-8">
           <p className="text-[#555555] text-sm leading-relaxed">{answer}</p>
         </div>
       )}
@@ -88,6 +88,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
 export default function FAQ() {
   return (
     <div className="pt-20">
+
       {/* Header */}
       <section className="bg-[#0a2744] text-white relative overflow-hidden">
         <div
@@ -109,14 +110,14 @@ export default function FAQ() {
             <span className="text-[#C9A84C]">before the first call.</span>
           </h1>
           <p className="text-white/70 text-base leading-relaxed max-w-xl">
-            Answers to the questions facility managers and operations teams ask before engaging a new cleaning partner.
+            The questions facility managers, practice managers, and gym owners ask before they engage a new cleaning partner. Answered directly.
           </p>
         </div>
         <div className="h-1 bg-[#C9A84C]" />
       </section>
 
       {/* FAQ list */}
-      <section className="py-20 bg-white">
+      <section className="pt-6 pb-10 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t border-[#dddddd]">
             {faqs.map((faq) => (
@@ -124,15 +125,14 @@ export default function FAQ() {
             ))}
           </div>
 
-          {/* Didn't find answer */}
-          <div className="mt-16 bg-[#f5f5f5] p-10 border-l-4 border-[#C9A84C]">
-            <h3 className="font-heading font-semibold text-xl text-[#0a2744] mb-3">
-              Didn't find what you were looking for?
+          <div className="mt-10 bg-[#f5f5f5] p-8 border-l-4 border-[#C9A84C]">
+            <h3 className="font-heading font-semibold text-base text-[#0a2744] mb-2">
+              Still have a question?
             </h3>
-            <p className="text-[#555555] text-sm leading-relaxed mb-6">
-              Call us directly or send a message and we'll get back to you within one business day.
+            <p className="text-[#555555] text-sm leading-relaxed mb-5">
+              Call us directly or send a message. We respond within one business day.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="tel:0430789756"
                 className="inline-flex items-center justify-center gap-2 bg-[#0a2744] hover:bg-[#0f3460] text-white font-heading font-semibold px-6 py-3 text-sm transition-colors duration-200"
@@ -152,27 +152,28 @@ export default function FAQ() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#C9A84C]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+      <section className="bg-[#0a2744] border-t-4 border-[#C9A84C]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
-              <h2 className="font-heading font-bold text-3xl text-[#0a2744] mb-3">
+              <h2 className="font-heading font-semibold text-2xl text-white mb-2">
                 Ready to get started?
               </h2>
-              <p className="text-[#0a2744]/70 text-lg">
-                Book a free site visit. No obligation. Tailored proposal within 48 hours.
+              <p className="text-white/70 text-sm">
+                Book a free site visit. No obligation. Proposal within 48 hours.
               </p>
             </div>
             <Link
               to="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#0a2744] hover:bg-[#0f3460] text-white font-heading font-semibold px-8 py-4 transition-colors duration-200"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#a8873a] text-[#0a2744] font-heading font-semibold px-7 py-3 text-sm transition-colors duration-200 whitespace-nowrap"
             >
               Book a Site Visit
-              <ArrowRight size={18} />
+              <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
+
     </div>
   )
 }
