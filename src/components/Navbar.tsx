@@ -30,7 +30,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-[#C9A84C] ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[#f5f5f5] border-t-4 border-b-4 border-[#C9A84C] ${
         scrolled ? 'shadow-md' : ''
       }`}
     >
