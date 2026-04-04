@@ -55,8 +55,13 @@ export default function Home() {
   return (
     <div className="pt-20">
 
-      {/* Hero */}
-      <section className="bg-[#0a2744] text-white relative overflow-hidden">
+     {/* Hero */}
+      <section className="text-white relative overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: 'url(/hero-office.png)' }}
+        />
+        <div className="absolute inset-0 bg-[#0a2744]/80" />
         <div
           className="absolute inset-0 opacity-5"
           style={{
