@@ -1,12 +1,9 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
-const LOGO_URL = 'https://static.wixstatic.com/media/e9e3b0_1c4d7dfec370438c8590d8fcdbd34287~mv2.png'
-
 export default function Footer() {
   return (
     <footer className="bg-[#0a2744] text-white">
-      {/* Gold top bar */}
       <div className="h-1 bg-[#C9A84C]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -14,11 +11,10 @@ export default function Footer() {
 
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img
-              src={LOGO_URL}
-              alt="Keystone Facility Services"
-              className="h-16 w-auto mb-6"
-            />
+            <div className="mb-6">
+              <p className="font-heading font-bold text-xl text-white tracking-wide">KEYSTONE</p>
+              <p className="font-heading text-xs text-[#C9A84C] tracking-widest uppercase">Facility Services</p>
+            </div>
             <p className="text-white/60 text-sm leading-relaxed">
               A managed commercial cleaning system — not just a cleaning service. Every job tracked, verified, and fully accountable.
             </p>
