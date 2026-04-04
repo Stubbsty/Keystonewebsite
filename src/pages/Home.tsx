@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Services overview */}
-      <section className="pt-4 pb-10 bg-white">
+      <section className="pt-7 pb-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <span className="gold-line mb-4" />
@@ -186,7 +186,7 @@ export default function Home() {
       </section>
 
       {/* About snippet */}
-      <section className="pt-4 pb-10 bg-white">
+      <section className="pt-7 pb-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
