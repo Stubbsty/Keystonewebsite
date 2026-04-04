@@ -119,7 +119,7 @@ export default function Home() {
       </section>
 
       {/* Services overview */}
-      <section className="pt-4 pb-10 bg-white">
+      <section className="pt-4 pb-10 bg-white border-b-2 border-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <span className="gold-line mb-4" />
@@ -158,7 +158,7 @@ export default function Home() {
       </section>
 
       {/* Why Keystone */}
-      <section className="pt-4 pb-10 bg-[#0a2744] text-white">
+      <section className="pt-4 pb-10 bg-[#0a2744] text-white border-b-2 border-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <span className="gold-line mb-4" />
@@ -185,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* About snippet */}
-      <section className="pt-4 pb-10 bg-white">
+      <section className="pt-4 pb-10 bg-white border-b-2 border-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
