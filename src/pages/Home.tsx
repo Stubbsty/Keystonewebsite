@@ -61,7 +61,7 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: 'url(/hero-office.png)' }}
         />
-        <div className="absolute inset-0 bg-[#0a2744]/80" />
+        <div className="absolute inset-0 bg-[#0a2744]/65" />
         <div
           className="absolute inset-0 opacity-5"
           style={{
