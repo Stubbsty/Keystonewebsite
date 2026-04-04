@@ -159,7 +159,7 @@ export default function Home() {
       </section>
 
       {/* Why Keystone */}
-      <section className="pt-10 pb-10 bg-[#0a2744] text-white">
+      <section className="pt-8 pb-10 bg-[#0a2744] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <span className="gold-line mb-4" />
