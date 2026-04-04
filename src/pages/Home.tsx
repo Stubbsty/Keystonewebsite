@@ -72,7 +72,7 @@ export default function Home() {
                 Commercial Cleaning · Queensland
               </span>
             </div>
-            <h1 className="font-heading font-bold text-5xl lg:text-7xl leading-[1.05] mb-8">
+            <h1 className="font-heading font-semibold text-3xl lg:text-5xl leading-[1.1] mb-8">
               Your Facility.<br />
               <span className="text-[#C9A84C]">Our Responsibility.</span>
             </h1>
@@ -121,11 +121,11 @@ export default function Home() {
       </section>
 
       {/* Services overview */}
-      <section className="py-24 bg-white">
+     <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16">
+          <div className="mb-10">
             <span className="gold-line mb-6" />
-            <h2 className="font-heading font-bold text-4xl lg:text-5xl text-[#0a2744] mb-6">
+            <h2 className="font-heading font-semibold text-2xl lg:text-3xl text-[#0a2744] mb-6">
               What We Clean
             </h2>
             <p className="text-[#555555] text-lg max-w-2xl">
@@ -164,7 +164,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <span className="gold-line mb-6" />
-            <h2 className="font-heading font-bold text-4xl lg:text-5xl mb-6">
+            <h2 className="font-heading font-semibold text-2xl lg:text-3xl mb-6">
               Why Keystone?
             </h2>
             <p className="text-white/70 text-lg max-w-2xl">
@@ -192,7 +192,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="gold-line mb-6" />
-              <h2 className="font-heading font-bold text-4xl lg:text-5xl text-[#0a2744] mb-6">
+              <h2 className="font-heading font-semibold text-2xl lg:text-3xl text-[#0a2744] mb-6">
                 Built for businesses that can't afford to get it wrong.
               </h2>
               <p className="text-[#555555] text-lg leading-relaxed mb-6">
@@ -235,20 +235,20 @@ export default function Home() {
       </section>
 
       {/* CTA Banner */}
-      <section className="bg-[#C9A84C]">
+      <section className="bg-[#0a2744] border-t-4 border-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="font-heading font-bold text-3xl lg:text-4xl text-[#0a2744] mb-3">
                 Ready for a cleaning service you can actually rely on?
               </h2>
-              <p className="text-[#0a2744]/70 text-lg">
+              <p className="text-white/70 text-lg">
                 Book a free site visit. No obligation. We'll walk your site and provide a tailored proposal within 48 hours.
               </p>
             </div>
             <Link
               to="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#0a2744] hover:bg-[#0f3460] text-white font-heading font-semibold px-8 py-4 text-base transition-colors duration-200 whitespace-nowrap"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#a8873a] text-[#0a2744] font-heading font-semibold px-8 py-4 text-base transition-colors duration-200 whitespace-nowrap"
             >
               Book a Site Visit
               <ArrowRight size={18} />
