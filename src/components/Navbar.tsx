@@ -42,7 +42,7 @@ export default function Navbar() {
             <img
               src={LOGO_URL}
               alt="Keystone Facility Services"
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 
