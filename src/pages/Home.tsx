@@ -121,8 +121,7 @@ export default function Home() {
       {/* Services overview */}
       <section className="pt-4 pb-10 bg-white border-b-2 border-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6">
-            <span className="gold-line mb-4" />
+          <div className="mb-6">          
             <h2 className="font-heading font-semibold text-2xl lg:text-3xl text-[#0a2744] mb-3">
               Who we work with
             </h2>
@@ -161,7 +160,6 @@ export default function Home() {
       <section className="pt-4 pb-10 bg-[#0a2744] text-white border-b-2 border-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
-            <span className="gold-line mb-4" />
             <h2 className="font-heading font-semibold text-2xl lg:text-3xl mb-3">
               What makes Keystone different
             </h2>
@@ -188,8 +186,7 @@ export default function Home() {
       <section className="pt-4 pb-10 bg-white border-b-2 border-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <span className="gold-line mb-4" />
+            <div>          
               <h2 className="font-heading font-semibold text-2xl lg:text-3xl text-[#0a2744] mb-4">
                 Built for businesses that can't afford to get it wrong.
               </h2>
