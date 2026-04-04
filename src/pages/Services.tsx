@@ -7,10 +7,10 @@ const services = [
     title: 'Commercial Offices',
     tagline: 'Consistent. Documented. Zero disruption.',
     description:
-      'Professional workplaces need cleaning that happens without being noticed — and evidence that it was done right. Keystone delivers structured programs with signed completion logs, QA reporting, and consistent teams who know your site.',
+      'Office cleaning should happen invisibly. Your team arrives to a clean workplace — no evidence of the process, just the result. Keystone delivers structured programs with consistent teams, signed completion logs, and QA reporting, so you\'re not managing the cleaner on top of everything else.',
     points: [
       'Daily, nightly, and periodic programs available',
-      'Consistent team assigned to your site',
+      'Consistent team assigned to your site — no strangers',
       'Signed completion logs after every visit',
       'Formal QA inspection reporting',
       'Consumables management included where required',
@@ -19,71 +19,71 @@ const services = [
   {
     id: 'medical-healthcare',
     title: 'Medical & Healthcare',
-    tagline: 'Accreditation-ready. Infection control compliant.',
+    tagline: 'Infection control. Accreditation ready. No shortcuts.',
     description:
-      'Medical environments demand more than clean — they demand documented, protocol-driven cleaning that holds up to accreditation scrutiny. Keystone uses TGA-listed disinfectants, trained staff, and documented procedures for every healthcare environment.',
+      'Medical environments don\'t have room for a cleaning failure. A missed protocol isn\'t just a quality issue — it\'s a patient safety risk and a compliance problem. Keystone uses TGA-listed disinfectants, trained staff, and documented procedures for every clinical environment, so your cleaning holds up to scrutiny.',
     points: [
-      'TGA-listed disinfectants as standard',
+      'TGA-listed disinfectants as standard — no substitutions',
       'Infection control protocols for high-risk areas',
       'Documented cleaning procedures per room type',
       'Accreditation-ready audit trails',
-      'WHS-compliant chemical handling and storage',
+      'WHS-compliant chemical handling and SDS register',
+    ],
+  },
+  {
+    id: 'gyms-fitness',
+    title: 'Gyms & Fitness',
+    tagline: 'High-touch. High-frequency. Members notice.',
+    description:
+      'Cleanliness is part of the product in a gym. Members form an opinion the moment they walk in. Keystone builds high-frequency programs targeting the surfaces that matter most — equipment, change rooms, bathrooms, and floors — scheduled around your opening hours so it never disrupts operations.',
+    points: [
+      'High-frequency programs for high-traffic surfaces',
+      'Scheduled around opening hours and peak usage',
+      'TGA-listed disinfectants for equipment and surfaces',
+      'Change room and bathroom deep-clean protocols',
+      'Consistent standard your members will notice',
     ],
   },
   {
     id: 'strata-body-corporate',
     title: 'Strata & Body Corporate',
-    tagline: 'One relationship. Multiple sites. Full accountability.',
+    tagline: 'One contact. Multiple sites. Full accountability.',
     description:
-      'Strata managers need a cleaning partner who can coordinate across multiple buildings, communicate clearly with body corporate committees, and maintain consistent standards across every common area — all under a single accountable contract.',
+      'Managing cleaning across multiple buildings means coordinating schedules, communicating with committees, and maintaining consistent standards at every site. Keystone handles all of it under a single contract, with one account manager across every building in your portfolio.',
     points: [
       'Common areas, lifts, lobbies, and car parks',
-      'Single point of contact for multiple sites',
+      'Single point of contact for all sites',
       'Coordinated scheduling across buildings',
       'Regular reporting to body corporate committees',
       'Reactive cleaning available for incidents',
     ],
   },
   {
-    id: 'gyms-fitness',
-    title: 'Gyms & Fitness',
-    tagline: 'High-frequency. High-touch. Hygiene-first.',
-    description:
-      'Gyms carry higher infection risk than most commercial environments. Keystone builds high-frequency cleaning programs targeting equipment surfaces, change rooms, bathrooms, and flooring — maintaining the hygiene standard members expect.',
-    points: [
-      'High-touch surface disinfection programs',
-      'Change room and bathroom deep-clean protocols',
-      'Equipment wipe-down and floor care programs',
-      'Scheduling around opening hours and peak times',
-      'TGA-listed products for high-risk surfaces',
-    ],
-  },
-  {
     id: 'retail-hospitality',
     title: 'Retail & Hospitality',
-    tagline: 'Customer-facing. Brand-reflecting.',
+    tagline: 'Your space reflects your brand. We protect that.',
     description:
-      'The standard of your retail space or hospitality venue is visible to every customer who walks through the door. Keystone delivers daily or overnight programs that maintain the presentation your brand demands, without disrupting trading hours.',
+      'The standard of your retail or hospitality environment communicates something to every customer before a word is spoken. Keystone delivers daily or overnight programs that maintain your presentation standard and fit around your trading hours — no disruption, no excuses.',
     points: [
-      'Daily and overnight programs available',
-      'Scheduled around trading hours',
-      'Floor care, fixtures, and customer areas',
-      'Glass, surfaces, and entry points',
-      'Consistent teams — same staff, same standards',
+      'Daily and overnight scheduling around trading hours',
+      'Floor care, fixtures, and customer-facing areas',
+      'Glass, surfaces, and entry point programs',
+      'Consistent teams who know your space',
+      'Fast response to spills and reactive incidents',
     ],
   },
   {
     id: 'industrial-warehousing',
     title: 'Industrial & Warehousing',
-    tagline: 'Heavy-duty. Safety-focused. WHS-compliant.',
+    tagline: 'Safety-first. WHS-compliant. Fully documented.',
     description:
-      'Industrial and warehouse environments require cleaning programs built around safety — slip hazards, chemical spills, dust accumulation, and access restrictions. Keystone delivers documented, WHS-compliant programs for large-format facilities.',
+      'Industrial environments combine heavy cleaning demands with serious safety obligations. Slip hazards, chemical residues, and restricted zones all require a program that\'s built around safety first. Keystone delivers WHS-compliant industrial cleaning with pre-shift hazard assessments and full documentation.',
     points: [
-      'Pre-shift hazard assessment as standard',
-      'WHS-compliant procedures and documentation',
-      'Chemical and materials handling protocols',
-      'Floor care and heavy-duty cleaning capability',
-      'Documented audit trails for compliance',
+      'Pre-shift hazard assessment on every visit',
+      'WHS-compliant procedures for all industrial tasks',
+      'Chemical and hazardous materials awareness',
+      'Heavy-duty floor care and surface programs',
+      'Full documentation for safety and compliance audits',
     ],
   },
 ]
@@ -91,6 +91,7 @@ const services = [
 export default function Services() {
   return (
     <div className="pt-20">
+
       {/* Header */}
       <section className="bg-[#0a2744] text-white relative overflow-hidden">
         <div
@@ -112,45 +113,45 @@ export default function Services() {
             <span className="text-[#C9A84C]">environment.</span>
           </h1>
           <p className="text-white/70 text-base leading-relaxed max-w-xl">
-            Every environment is different. Every Keystone program is built around the specific requirements of your site — not a one-size-fits-all template.
+            Every site is different. Every Keystone program is built around what your environment actually requires — not a template applied regardless of context.
           </p>
         </div>
         <div className="h-1 bg-[#C9A84C]" />
       </section>
 
       {/* Services list */}
-      <section className="py-24 bg-white">
+      <section className="pt-6 pb-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-16">
+          <div className="space-y-12">
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-start pb-16 ${
+                className={`grid grid-cols-1 lg:grid-cols-2 gap-10 items-start pb-12 ${
                   index < services.length - 1 ? 'border-b border-[#dddddd]' : ''
                 }`}
               >
                 <div>
-                  <p className="font-heading text-[#C9A84C] font-medium text-sm tracking-widest uppercase mb-4">
+                  <p className="font-heading text-[#C9A84C] font-medium text-xs tracking-widest uppercase mb-3">
                     {String(index + 1).padStart(2, '0')}
                   </p>
-                  <h2 className="font-heading font-bold text-3xl text-[#0a2744] mb-3">
+                  <h2 className="font-heading font-semibold text-2xl text-[#0a2744] mb-2">
                     {service.title}
                   </h2>
-                  <p className="font-heading text-[#555555] text-lg font-medium mb-6">
+                  <p className="font-heading text-[#555555] text-sm font-medium mb-4">
                     {service.tagline}
                   </p>
-                  <p className="text-[#555555] text-base leading-relaxed">
+                  <p className="text-[#555555] text-sm leading-relaxed">
                     {service.description}
                   </p>
                 </div>
-                <div className="bg-[#f5f5f5] p-8">
-                  <h3 className="font-heading font-semibold text-sm text-[#0a2744] tracking-widest uppercase mb-6">
+                <div className="bg-[#f5f5f5] p-6">
+                  <h3 className="font-heading font-semibold text-xs text-[#0a2744] tracking-widest uppercase mb-4">
                     What's included
                   </h3>
-                  <ul className="space-y-4">
+                  <ul className="space-y-3">
                     {service.points.map((point) => (
                       <li key={point} className="flex items-start gap-3">
-                        <CheckCircle size={16} className="text-[#C9A84C] mt-0.5 shrink-0" />
+                        <CheckCircle size={14} className="text-[#C9A84C] mt-0.5 shrink-0" />
                         <span className="text-[#333333] text-sm leading-relaxed">{point}</span>
                       </li>
                     ))}
@@ -162,23 +163,23 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Also offer */}
-      <section className="py-20 bg-[#f5f5f5]">
+      {/* Additional services */}
+      <section className="pt-4 pb-10 bg-[#f5f5f5]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-12">
-            <span className="gold-line mb-6" />
-            <h2 className="font-heading font-bold text-3xl text-[#0a2744]">
+          <div className="mb-6">
+            <span className="gold-line mb-4" />
+            <h2 className="font-heading font-semibold text-2xl text-[#0a2744]">
               Additional services
             </h2>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               'End of Lease / Builders Clean',
               'Post-Event & Recovery Cleans',
               'Medical-Grade Disinfection',
               'Periodic Deep Cleaning',
             ].map((item) => (
-              <div key={item} className="bg-white p-6 border-l-4 border-[#C9A84C]">
+              <div key={item} className="bg-white p-5 border-l-4 border-[#C9A84C]">
                 <p className="font-heading font-semibold text-sm text-[#0a2744]">{item}</p>
               </div>
             ))}
@@ -187,27 +188,28 @@ export default function Services() {
       </section>
 
       {/* CTA */}
-      <section className="bg-[#C9A84C]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+      <section className="bg-[#0a2744] border-t-4 border-[#C9A84C]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
-              <h2 className="font-heading font-bold text-3xl text-[#0a2744] mb-3">
+              <h2 className="font-heading font-semibold text-2xl text-white mb-2">
                 Not sure which service fits your site?
               </h2>
-              <p className="text-[#0a2744]/70 text-lg">
-                Book a free site visit and we'll assess your facility and recommend the right program.
+              <p className="text-white/70 text-sm">
+                Book a free site visit. We'll assess your facility and tell you exactly what's needed — no obligation.
               </p>
             </div>
             <Link
               to="/contact"
-              className="shrink-0 inline-flex items-center gap-2 bg-[#0a2744] hover:bg-[#0f3460] text-white font-heading font-semibold px-8 py-4 transition-colors duration-200"
+              className="shrink-0 inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#a8873a] text-[#0a2744] font-heading font-semibold px-7 py-3 text-sm transition-colors duration-200 whitespace-nowrap"
             >
               Book a Site Visit
-              <ArrowRight size={18} />
+              <ArrowRight size={16} />
             </Link>
           </div>
         </div>
       </section>
+
     </div>
   )
 }
