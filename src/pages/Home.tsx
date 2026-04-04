@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* Trust bar */}
-      <section className="bg-[#f5f5f5] border-b border-[#dddddd]">
+      <section className="bg-[#f5f5f5] border-t-2 border-b-2 border-[#C9A84C]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-wrap justify-center lg:justify-between items-center gap-4">
             {[
