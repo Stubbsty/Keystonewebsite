@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 
-const LOGO_URL = '/Keystone_logo.png'
+const LOGO_URL = '/Logo_Web.png'
 
 const navLinks = [
   { label: 'Home', href: '/' },
