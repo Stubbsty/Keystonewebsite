@@ -64,7 +64,7 @@ export default function Home() {
             backgroundSize: '20px 20px',
           }}
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-10 bg-[#C9A84C]" />
