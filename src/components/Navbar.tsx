@@ -63,7 +63,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/contact"
-              className="ml-2 bg-[#0a2744] hover:bg-[#0f3460] text-white font-heading font-semibold text-sm px-5 py-2.5 transition-colors duration-200"
+              className="ml-2 bg-[#C9A84C] hover:bg-[#a8873a] text-[#0a2744] font-heading font-semibold text-sm px-5 py-2.5 transition-colors duration-200"
             >
               Request a Quote
             </Link>
