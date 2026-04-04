@@ -75,20 +75,17 @@ export default function About() {
               <h2 className="font-heading font-semibold text-2xl lg:text-3xl text-[#0a2744] mb-6">
                 Why Keystone exists
               </h2>
-              <div className="space-y-5 text-[#555555] text-sm leading-relaxed">
-                <p>
-                  The problem we kept seeing was simple. Businesses were stuck between two bad options — faceless national providers who treated every site like a number, or small operators who couldn't deliver consistent, documented, compliant service.
-                </p>
-                <p>
-                  When something went wrong, there was no one to call. No documentation to refer to. No process to fix it. Just a shrug and another missed clean.
-                </p>
-                <p>
-                  Keystone was built in that gap. We built the systems, the QA framework, and the operational structure from the ground up so that every client gets a service that's structured, accountable, and backed by someone who actually answers the phone.
-                </p>
-                <p>
-                  Every job is tracked. Every visit is verified. Nothing is left to memory or assumption.
-                </p>
-              </div>
+             <div className="space-y-5 text-[#555555] text-sm leading-relaxed">
+  <p>
+    Keystone was built around a clear standard — the systems and documentation of a large facility services company, combined with the direct accountability of an owner-operated business. Every client gets both.
+  </p>
+  <p>
+    We built the QA framework, the operational structure, and the client portal from the ground up — so that nothing relies on memory, nothing gets missed, and there's always someone accountable when you need answers.
+  </p>
+  <p>
+    Every job is tracked. Every visit is verified. Every client has one point of contact who knows their site.
+  </p>
+</div>
             </div>
             <div className="bg-[#f5f5f5] p-8 border-l-4 border-[#C9A84C]">
               <p className="font-heading font-semibold text-base text-[#0a2744] mb-1">Tyler Stubbs</p>
