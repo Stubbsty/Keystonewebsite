@@ -198,7 +198,7 @@ export default function Home() {
                 Medical practices. Professional offices. Gyms. These are environments where a cleaning failure isn't just an inconvenience — it's a compliance risk, a client experience problem, or a health issue.
               </p>
               <p className="text-[#555555] text-sm leading-relaxed mb-6">
-                Keystone was built with one goal: operate with the systems and documentation of a large facility services company, without losing the direct accountability of an owner-operated business. You get both — and you get someone who answers when you call.
+                We built the systems, the QA framework, and the client portal from the ground up — so that nothing relies on memory, nothing gets missed, and there's always someone accountable when you need answers. That's what you get with Keystone.
               </p>
               <Link
                 to="/about"
