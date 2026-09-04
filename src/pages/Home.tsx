@@ -7,7 +7,7 @@ const services = [
     description: 'Infection control protocols, TGA-listed disinfectants, and documented procedures built for accreditation-ready environments.',
   },
   {
-    title: 'Offices & Workplaces',
+    title: 'Commercial Offices',
     description: 'Consistent teams, signed completion logs, and QA reporting — so your workplace is ready before your staff arrive.',
   },
   {
@@ -32,7 +32,7 @@ const differentiators = [
   {
     icon: ClipboardCheck,
     title: 'Everything is documented',
-    description: 'Service completion is recorded and quality is checked through a documented QA process. If something is missed, it is identified, recorded, and followed through.',
+    description: 'Signed completion logs and formal QA inspection reports after every visit. If something was missed, you\'ll know — and so will we.',
   },
   {
     icon: Users,
@@ -42,7 +42,7 @@ const differentiators = [
   {
     icon: Shield,
     title: 'Compliance built in',
-    description: '$20M public liability, WHS management systems, documented procedures, and site-specific compliance requirements built into service delivery.',
+    description: '$20M public liability, police-checked staff, WHS management system, and tender-ready documentation — all standard.',
   },
   {
     icon: Clock,
@@ -68,7 +68,7 @@ export default function Home() {
             <div className="flex items-center gap-3 mb-6">
               <span className="h-px w-10 bg-[#C9A84C]" />
               <span className="font-heading text-[#C9A84C] text-xs font-medium tracking-widest uppercase">
-                Facility Cleaning · Queensland
+                Commercial Cleaning · Queensland
               </span>
             </div>
             <h1 className="font-heading font-semibold text-4xl lg:text-5xl leading-tight mb-6">
@@ -76,7 +76,7 @@ export default function Home() {
               <span className="text-[#C9A84C]">Our Responsibility.</span>
             </h1>
             <p className="text-white/70 text-base leading-relaxed mb-8 max-w-xl">
-              Keystone delivers managed facility cleaning built around accountability — documented service delivery, quality assurance, and a dedicated point of contact who knows your site.
+              Keystone is a managed cleaning system built around one principle — every visit tracked, verified, and backed by someone who picks up the phone. Structure and accountability, built in from the start.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
@@ -106,8 +106,8 @@ export default function Home() {
               '$20M Public Liability Insurance',
               'Police-Checked Staff',
               'ABN 60 640 710 845',
-              'Brisbane & Surrounding Areas',
-              'Documented Quality Assurance',
+              'Far North QLD to Brisbane',
+              'QA Reports Every Clean',
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] shrink-0" />
@@ -231,17 +231,17 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
             <div>
               <h2 className="font-heading font-semibold text-2xl text-white mb-2">
-                Ready for facility cleaning you don't have to chase?
+                Ready for a cleaning service that runs itself?
               </h2>
               <p className="text-white/70 text-sm">
-                Book a free site visit. We'll walk your facility, understand your requirements, and prepare a tailored service proposal.
+                Book a free site visit. We'll walk your facility, assess what's needed, and have a proposal back to you within 48 hours.
               </p>
             </div>
             <Link
               to="/contact"
               className="shrink-0 inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#a8873a] text-[#0a2744] font-heading font-semibold px-7 py-3 text-sm transition-colors duration-200 whitespace-nowrap"
             >
-              Book a Free Site Visit
+              Book a Site Visit
               <ArrowRight size={16} />
             </Link>
           </div>
