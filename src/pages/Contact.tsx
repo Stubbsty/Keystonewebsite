@@ -43,60 +43,25 @@ export default function Contact() {
     setErrorMsg('')
 
     try {
-      const res = await fetch('https://api.resend.com/emails', {
+      const res = await fetch(`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-contact-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${import.meta.env.VITE_RESEND_API_KEY}`,
+          Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
         },
         body: JSON.stringify({
-          from: 'noreply@keystonefacilityservices.com.au',
-          to: 'tyler.stubbs@keystonefacilityservices.com.au',
-          reply_to: form.email,
-          subject: `Website Enquiry — ${form.firstName} ${form.lastName}${form.company ? ` (${form.company})` : ''}`,
-          html: `
-            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
-              <div style="background: #0a2744; padding: 24px; margin-bottom: 24px;">
-                <p style="color: #C9A84C; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin: 0 0 8px;">New Website Enquiry</p>
-                <h1 style="color: white; font-size: 22px; margin: 0;">Keystone Facility Services</h1>
-              </div>
-              <div style="padding: 0 24px 24px;">
-                <table style="width: 100%; border-collapse: collapse;">
-                  <tr>
-                    <td style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; color: #555; width: 140px;">Name</td>
-                    <td style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; font-weight: 600; color: #333;">${form.firstName} ${form.lastName}</td>
-                  </tr>
-                  ${form.company ? `
-                  <tr>
-                    <td style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; color: #555;">Company</td>
-                    <td style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; font-weight: 600; color: #333;">${form.company}</td>
-                  </tr>` : ''}
-                  <tr>
-                    <td style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; color: #555;">Email</td>
-                    <td style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; color: #333;"><a href="mailto:${form.email}" style="color: #C9A84C;">${form.email}</a></td>
-                  </tr>
-                  ${form.phone ? `
-                  <tr>
-                    <td style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; color: #555;">Phone</td>
-                    <td style="padding: 10px 0; border-bottom: 1px solid #eee; font-size: 13px; color: #333;"><a href="tel:${form.phone}" style="color: #C9A84C;">${form.phone}</a></td>
-                  </tr>` : ''}
-                </table>
-                <div style="margin-top: 24px;">
-                  <p style="font-size: 12px; color: #555; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px;">Message</p>
-                  <div style="background: #f5f5f5; padding: 16px; font-size: 14px; line-height: 1.7; color: #333; white-space: pre-wrap;">${form.message}</div>
-                </div>
-                <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid #eee;">
-                  <p style="font-size: 12px; color: #aaa;">Submitted via keystonefacilityservices.com.au. Reply directly to this email to respond to ${form.firstName}.</p>
-                </div>
-              </div>
-            </div>
-          `,
+          firstName: form.firstName,
+          lastName: form.lastName,
+          company: form.company,
+          phone: form.phone,
+          email: form.email,
+          message: form.message,
         }),
       })
 
       if (!res.ok) {
-        const data = await res.json()
-        throw new Error(data?.message || 'Failed to send message.')
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data?.error || 'Failed to send message.')
       }
 
       setState('success')
